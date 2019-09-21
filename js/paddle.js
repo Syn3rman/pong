@@ -1,5 +1,3 @@
-// let paddleImg;  
-
 class Paddle{
   constructor(WIDTH, HEIGHT, paddleImg){
     this.paddleHieght = 150;
@@ -15,6 +13,7 @@ class Paddle{
   }
 
   move(keyCode){
+    console.log("Hiii");
     var paddleBottom = this.y + this.paddleHieght;
     if(paddleBottom >= window.innerHeight){
       this.y = window.innerHeight - this.paddleHieght;

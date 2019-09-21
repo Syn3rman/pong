@@ -1,4 +1,6 @@
-let paddle, paddleImg, ball, ballImg;
+let paddle;
+let paddleImg;
+let ball, ballImg;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
@@ -11,14 +13,28 @@ function setup() {
 
 function draw() {
   clear();
+  console.log(isKeyPressed, keyIsDown(UP_ARROW));
   paddle.show();
-  ball.move(window.innerWidth, window.innerHeight);
-  ball.show();
-  if(keyIsDown(UP_ARROW))
+  if(keyIsDown(UP_ARROW)){
     paddle.move(38);
-  if(keyIsDown(DOWN_ARROW))
-      paddle.move(40);
+  }
+  if(keyIsDown(DOWN_ARROW)){
+    paddle.move(40);
+  }
+  ball.show();
+  ball.move(window.innerWidth, window.innerHeight);
 }
+
+// function keyPressed(){
+//   if(keyCode === UP_ARROW){
+//     console.log("UP");
+//     paddle.move(38);
+//   }
+//   if(keyCode === DOWN_ARROW){
+//     paddle.move(40);
+//   }
+// }
+
 
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
