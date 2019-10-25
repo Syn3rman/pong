@@ -2,5 +2,5 @@
 AI plays pong.
 
 ### To-do's:
-[X] Make clone of pong
-[] Make computer play it
+- [X] Make clone of pong
+- [] Make computer play it
