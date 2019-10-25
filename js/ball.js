@@ -1,8 +1,8 @@
 class Ball{
   constructor(WIDTH, HEIGHT){
     this.radius = 15;
-    this.x = Math.floor(Math.random()*WIDTH);
-    this.y = Math.floor(Math.random()*HEIGHT);
+    this.x = WIDTH/2;
+    this.y = Math.random()*((2*HEIGHT)/3-HEIGHT/3) + HEIGHT/3;
     this.vy = 7;
     this.vx = 7;
   }
