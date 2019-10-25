@@ -1,19 +1,19 @@
 class Paddle{
-  constructor(WIDTH, HEIGHT, paddleImg){
-    this.paddleHieght = 150;
-    this.paddleWidth = 20;
+  constructor(WIDTH, HEIGHT){
+    this.paddleHieght = 162;
+    this.paddleWidth = 34;
     this.x = WIDTH  - this.paddleWidth/2 - 50;
     this.y = HEIGHT/2 - this.paddleHieght/2;
-    this.paddleImg = paddleImg; 
     this.vy = 15;
   }
 
   show(){
-    image(this.paddleImg,this.x,this.y);
+    fill(40);
+    rect(this.x,this.y,this.paddleWidth, this.paddleHieght);
+    fill(255);
   }
 
   move(keyCode){
-    console.log("Hiii");
     var paddleBottom = this.y + this.paddleHieght;
     if(paddleBottom >= window.innerHeight){
       this.y = window.innerHeight - this.paddleHieght;
