@@ -3,10 +3,7 @@ html, body {
   margin: 0; 
 }
 
-#paddle{
-  display: none;
-}
-
-#ball{
-  display: none;
+.score{  
+  position: absolute;
+  left: 50%;
 }
