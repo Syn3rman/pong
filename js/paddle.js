@@ -1,10 +1,15 @@
 class Paddle{
-  constructor(WIDTH, HEIGHT){
+  constructor(x, y, isComputer){
     this.paddleHieght = 162;
     this.paddleWidth = 34;
-    this.x = WIDTH  - this.paddleWidth/2 - 50;
-    this.y = HEIGHT/2 - this.paddleHieght/2;
-    this.vy = 15;
+    this.x = x;
+    this.y = y;
+    if(isComputer){
+      this.vy = 100;
+    }
+    else{
+      this.vy = 15;
+    }
   }
 
   show(){
@@ -28,6 +33,16 @@ class Paddle{
     // move down
     else if(keyCode == 40){
       this.y += this.vy;
+    }
+  }
+
+  play(){
+    this.y = ball.y-computer.paddleHieght/2;
+    if(this.y+this.paddleHieght>=window.innerHeight){
+      this.y = window.innerHeight - this.paddleHieght;  
+    }
+    if(this.y <= 0){
+      this.y = 0;
     }
   }
 }

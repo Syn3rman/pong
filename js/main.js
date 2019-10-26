@@ -1,4 +1,4 @@
-let paddle, ball, player1;
+let paddle, ball, computer, player1, player2;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
